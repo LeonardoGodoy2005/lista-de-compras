@@ -37,13 +37,9 @@ Algumas possibilidades para evoluir o projeto:
 - [ ] Exportação da lista para impressão ou arquivo.
 - [ ] Organização de múltiplas listas de compras.
 
-## 👨‍💻 Autor
+## 👨‍💻 Autor **Leonardo Godoy** 
 
-Desenvolvido por **Leonardo Godoy** como parte da jornada de aprendizado em desenvolvimento web.
-
-- GitHub: (https://github.com/LeonardoGodoy2005)
-- LinkedIn: (https://www.linkedin.com/in/leonardo-godoy-b56361300)
-
+[GitHub](https://github.com/LeonardoGodoy2005) · [LinkedIn](https://www.linkedin.com/in/leonardo-godoy-b56361300/)
 ---
 
 Projeto desenvolvido com 💜 a partir de um desafio da Rocketseat, com funcionalidades adicionais para explorar e praticar novos conceitos.
