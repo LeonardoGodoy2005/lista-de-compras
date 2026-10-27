@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Lista de compras semanal desenvolvida com HTML, CSS e JavaScript."
+    >
+
+    <title>Compras da Semana</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="aplicacao">
+
+        <!-- Cabeçalho -->
+
+        <header class="cabecalho">
+
+            <button class="botao-voltar" id="botaoVoltar">
+                <span>←</span>
+                Voltar
+            </button>
+
+            <button
+                class="botao-tema"
+                id="botaoTema"
+                aria-label="Alterar tema"
+            >
+                🌙
+            </button>
+
+        </header>
+
+        <!-- Conteúdo principal -->
+
+        <main class="conteudo">
+
+            <section class="apresentacao">
+
+                <div class="icone-aplicacao">
+                    🛒
+                </div>
+
+                <div>
+                    <span class="etiqueta">ORGANIZAÇÃO</span>
+
+                    <h1>
+                        Compras da semana
+                    </h1>
+
+                    <p id="dataAtual">
+                        Organize suas compras de forma simples.
+                    </p>
+                </div>
+
+            </section>
+
+            <!-- Estatísticas -->
+
+            <section class="estatisticas">
+
+                <div class="estatistica">
+
+                    <div class="estatistica-icone">
+                        🛍️
+                    </div>
+
+                    <div>
+                        <strong id="totalItens">0</strong>
+                        <span>Total de itens</span>
+                    </div>
+
+                </div>
+
+                <div class="estatistica">
+
+                    <div class="estatistica-icone">
+                        ⏳
+                    </div>
+
+                    <div>
+                        <strong id="itensPendentes">0</strong>
+                        <span>Pendentes</span>
+                    </div>
+
+                </div>
+
+                <div class="estatistica">
+
+                    <div class="estatistica-icone">
+                        ✅
+                    </div>
+
+                    <div>
+                        <strong id="itensConcluidos">0</strong>
+                        <span>Concluídos</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Progresso -->
+
+            <section class="progresso">
+
+                <div class="progresso-cabecalho">
+
+                    <span>Progresso da lista</span>
+
+                    <strong id="porcentagemProgresso">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="barra-progresso">
+                    <div
+                        class="barra-progresso-preenchida"
+                        id="barraProgresso"
+                    ></div>
+                </div>
+
+            </section>
+
+            <!-- Área de adicionar -->
+
+            <section class="area-adicionar">
+
+                <div class="titulo-secao">
+
+                    <div>
+                        <h2>Adicionar item</h2>
+
+                        <p>
+                            O que você precisa comprar?
+                        </p>
+                    </div>
+
+                </div>
+
+                <form
+                    class="formulario"
+                    id="formularioItem"
+                >
+
+                    <div class="campo-input">
+
+                        <span>＋</span>
+
+                        <input
+                            type="text"
+                            id="campoItem"
+                            placeholder="Ex: Arroz, leite, frutas..."
+                            autocomplete="off"
+                            maxlength="80"
+                        >
+
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="botao-adicionar"
+                    >
+                        Adicionar
+                    </button>
+
+                </form>
+
+            </section>
+
+            <!-- Lista -->
+
+            <section class="area-lista">
+
+                <div class="cabecalho-lista">
+
+                    <div>
+
+                        <h2>
+                            Sua lista
+                        </h2>
+
+                        <span id="contadorLista">
+                            0 itens
+                        </span>
+
+                    </div>
+
+                    <button
+                        class="botao-limpar"
+                        id="botaoLimpar"
+                    >
+                        🧹 Limpar concluídos
+                    </button>
+
+                </div>
+
+                <!-- Pesquisa -->
+
+                <div class="area-pesquisa">
+
+                    <span>🔎</span>
+
+                    <input
+                        type="text"
+                        id="campoPesquisa"
+                        placeholder="Pesquisar item..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+                <!-- Filtros -->
+
+                <div class="filtros">
+
+                    <button
+                        class="filtro ativo"
+                        data-filtro="todos"
+                    >
+                        Todos
+                    </button>
+
+                    <button
+                        class="filtro"
+                        data-filtro="pendentes"
+                    >
+                        Pendentes
+                    </button>
+
+                    <button
+                        class="filtro"
+                        data-filtro="concluidos"
+                    >
+                        Concluídos
+                    </button>
+
+                </div>
+
+                <!-- Lista dinâmica -->
+
+                <ul
+                    class="lista-itens"
+                    id="listaItens"
+                ></ul>
+
+                <!-- Estado vazio -->
+
+                <div
+                    class="lista-vazia"
+                    id="listaVazia"
+                >
+
+                    <div class="lista-vazia-icone">
+                        🛒
+                    </div>
+
+                    <h3>
+                        Sua lista está vazia
+                    </h3>
+
+                    <p>
+                        Adicione seu primeiro item para começar.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+
+        <footer class="rodape">
+
+            <span>
+                Feito com 💜 para praticar JavaScript
+            </span>
+
+            <span>
+                HTML • CSS • JavaScript
+            </span>
+
+        </footer>
+
+    </div>
+
+    <!-- Alerta -->
+
+    <div
+        class="alerta"
+        id="alerta"
+    >
+
+        <span class="alerta-icone">
+            ⚠️
+        </span>
+
+        <div class="alerta-conteudo">
+
+            <strong id="tituloAlerta">
+                Item removido
+            </strong>
+
+            <span id="mensagemAlerta">
+                O item foi removido da lista.
+            </span>
+
+        </div>
+
+        <button
+            class="fechar-alerta"
+            id="fecharAlerta"
+        >
+        
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
