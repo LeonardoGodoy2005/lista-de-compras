@@ -41,8 +41,8 @@ Algumas possibilidades para evoluir o projeto:
 
 Desenvolvido por **Leonardo Godoy** como parte da jornada de aprendizado em desenvolvimento web.
 
-- GitHub: [Meu perfil no GitHub](https://github.com/SEU-USUARIO)
-- LinkedIn: [Meu perfil no LinkedIn](https://www.linkedin.com/)
+- GitHub: (https://github.com/LeonardoGodoy2005)
+- LinkedIn: (https://www.linkedin.com/in/leonardo-godoy-b56361300)
 
 ---
 
